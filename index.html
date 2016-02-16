@@ -1,6 +1,12 @@
 ---
 profile: true
+tabber: true
 ---
 
 {% include post-list.html %}
+{% include qiita-list.html %}
 {% include footer.html %}
+
+<script>
+  new QiitaPostManager($('#qiita-list'));
+</script>
