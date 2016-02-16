@@ -4,7 +4,7 @@ meta_description: "tsugitta's trivial diary"
 aboutPage: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 babel_js_extensions: 'js, es6, babel, jsx'
 
 paginate: 20
