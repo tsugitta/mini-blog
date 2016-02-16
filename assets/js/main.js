@@ -172,7 +172,7 @@ var QiitaPost = (function () {
   }, {
     key: 'render',
     value: function render() {
-      return '\n      <li>\n          <a href="' + this.url + '"><aside class="dates">' + this.created_at + '</aside></a>\n          <a href="' + this.url + '">' + this.title + '</a>\n      </li>\n    ';
+      return '\n      <li>\n          <aside class="dates">' + this.created_at + '</aside>\n          <a href="' + this.url + '">' + this.title + '</a>\n      </li>\n    ';
     }
   }]);
 

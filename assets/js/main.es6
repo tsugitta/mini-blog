@@ -101,7 +101,7 @@ class QiitaPost {
   render() {
     return `
       <li>
-          <a href="${this.url}"><aside class="dates">${this.created_at}</aside></a>
+          <aside class="dates">${this.created_at}</aside>
           <a href="${this.url}">${this.title}</a>
       </li>
     `;
