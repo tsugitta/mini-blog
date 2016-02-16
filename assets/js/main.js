@@ -21,7 +21,7 @@ var TabBar = (function () {
   _createClass(TabBar, [{
     key: 'onClickPostTab',
     value: function onClickPostTab() {
-      this.addSelectClassTo(this.$postTab);
+      this.select(this.$postTab);
       this.hideContents();
       this.$postList.show();
       this.$pagination.show();
@@ -29,13 +29,13 @@ var TabBar = (function () {
   }, {
     key: 'onClickQiitaTab',
     value: function onClickQiitaTab() {
-      this.addSelectClassTo(this.$qiitaTab);
+      this.select(this.$qiitaTab);
       this.hideContents();
       this.$qiitaList.show();
     }
   }, {
-    key: 'addSelectClassTo',
-    value: function addSelectClassTo($tab) {
+    key: 'select',
+    value: function select($tab) {
       this.$postTab.removeClass('selected');
       this.$qiitaTab.removeClass('selected');
       $tab.addClass('selected');

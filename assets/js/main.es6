@@ -15,19 +15,19 @@ class TabBar {
   }
 
   onClickPostTab() {
-    this.addSelectClassTo(this.$postTab);
+    this.select(this.$postTab);
     this.hideContents();
     this.$postList.show();
     this.$pagination.show();
   }
 
   onClickQiitaTab() {
-    this.addSelectClassTo(this.$qiitaTab);
+    this.select(this.$qiitaTab);
     this.hideContents();
     this.$qiitaList.show();
   }
 
-  addSelectClassTo($tab) {
+  select($tab) {
     this.$postTab.removeClass('selected');
     this.$qiitaTab.removeClass('selected');
     $tab.addClass('selected');
