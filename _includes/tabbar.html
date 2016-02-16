@@ -1,6 +1,6 @@
 <section id="tabbar-wrapper">
-  <div id="post-tab" class="tabbar-item selected">
-    Post
+  <div id="diary-tab" class="tabbar-item selected">
+    Diary
   </div>
   <div id="qiita-tab" class="tabbar-item">
     Qiita
@@ -10,9 +10,9 @@
 <script>
   $(document).on('ready page:load', function() {
     new TabBar(
-      $('#post-tab'),
+      $('#diary-tab'),
       $('#qiita-tab'),
-      $('#post-list'),
+      $('#diary-list'),
       $('#qiita-list'),
       $('#post-nav')
     );

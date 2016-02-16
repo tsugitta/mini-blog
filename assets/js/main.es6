@@ -3,21 +3,21 @@ layout: null
 ---
 
 class TabBar {
-  constructor($postTab, $qiitaTab, $postList, $qiitaList, $pagination) {
-    this.$postTab = $postTab;
+  constructor($diaryTab, $qiitaTab, $diaryList, $qiitaList, $pagination) {
+    this.$diaryTab = $diaryTab;
     this.$qiitaTab = $qiitaTab;
-    this.$postList = $postList;
+    this.$diaryList = $diaryList;
     this.$qiitaList = $qiitaList;
     this.$pagination = $pagination;
 
-    this.$postTab.on('click', this.onClickPostTab.bind(this));
+    this.$diaryTab.on('click', this.onClickdiaryTab.bind(this));
     this.$qiitaTab.on('click', this.onClickQiitaTab.bind(this));
   }
 
-  onClickPostTab() {
-    this.select(this.$postTab);
+  onClickdiaryTab() {
+    this.select(this.$diaryTab);
     this.hideContents();
-    this.$postList.show();
+    this.$diaryList.show();
     this.$pagination.show();
   }
 
@@ -28,13 +28,13 @@ class TabBar {
   }
 
   select($tab) {
-    this.$postTab.removeClass('selected');
+    this.$diaryTab.removeClass('selected');
     this.$qiitaTab.removeClass('selected');
     $tab.addClass('selected');
   }
 
   hideContents() {
-    this.$postList.hide();
+    this.$diaryList.hide();
     this.$qiitaList.hide();
     this.$pagination.hide();
   }

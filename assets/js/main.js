@@ -5,25 +5,25 @@ var _createClass = (function () { function defineProperties(target, props) { for
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 var TabBar = (function () {
-  function TabBar($postTab, $qiitaTab, $postList, $qiitaList, $pagination) {
+  function TabBar($diaryTab, $qiitaTab, $diaryList, $qiitaList, $pagination) {
     _classCallCheck(this, TabBar);
 
-    this.$postTab = $postTab;
+    this.$diaryTab = $diaryTab;
     this.$qiitaTab = $qiitaTab;
-    this.$postList = $postList;
+    this.$diaryList = $diaryList;
     this.$qiitaList = $qiitaList;
     this.$pagination = $pagination;
 
-    this.$postTab.on('click', this.onClickPostTab.bind(this));
+    this.$diaryTab.on('click', this.onClickdiaryTab.bind(this));
     this.$qiitaTab.on('click', this.onClickQiitaTab.bind(this));
   }
 
   _createClass(TabBar, [{
-    key: 'onClickPostTab',
-    value: function onClickPostTab() {
-      this.select(this.$postTab);
+    key: 'onClickdiaryTab',
+    value: function onClickdiaryTab() {
+      this.select(this.$diaryTab);
       this.hideContents();
-      this.$postList.show();
+      this.$diaryList.show();
       this.$pagination.show();
     }
   }, {
@@ -36,14 +36,14 @@ var TabBar = (function () {
   }, {
     key: 'select',
     value: function select($tab) {
-      this.$postTab.removeClass('selected');
+      this.$diaryTab.removeClass('selected');
       this.$qiitaTab.removeClass('selected');
       $tab.addClass('selected');
     }
   }, {
     key: 'hideContents',
     value: function hideContents() {
-      this.$postList.hide();
+      this.$diaryList.hide();
       this.$qiitaList.hide();
       this.$pagination.hide();
     }
