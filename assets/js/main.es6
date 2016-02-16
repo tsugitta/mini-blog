@@ -34,7 +34,6 @@ class TabBar {
   }
 
   hideContents() {
-    console.log(this.$postTab);
     this.$postList.hide();
     this.$qiitaList.hide();
     this.$pagination.hide();
