@@ -3,7 +3,7 @@ description: toybox
 meta_description: "tsugitta's trivial diary"
 aboutPage: true
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 babel_js_extensions: 'js, es6, babel, jsx'
 
