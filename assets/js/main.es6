@@ -2,6 +2,45 @@
 layout: null
 ---
 
+class TabBar {
+  constructor($postTab, $qiitaTab, $postList, $qiitaList, $pagination) {
+    this.$postTab = $postTab;
+    this.$qiitaTab = $qiitaTab;
+    this.$postList = $postList;
+    this.$qiitaList = $qiitaList;
+    this.$pagination = $pagination;
+
+    this.$postTab.on('click', this.onClickPostTab.bind(this));
+    this.$qiitaTab.on('click', this.onClickQiitaTab.bind(this));
+  }
+
+  onClickPostTab() {
+    this.addSelectClassTo(this.$postTab);
+    this.hideContents();
+    this.$postList.show();
+    this.$pagination.show();
+  }
+
+  onClickQiitaTab() {
+    this.addSelectClassTo(this.$qiitaTab);
+    this.hideContents();
+    this.$qiitaList.show();
+  }
+
+  addSelectClassTo($tab) {
+    this.$postTab.removeClass('selected');
+    this.$qiitaTab.removeClass('selected');
+    $tab.addClass('selected');
+  }
+
+  hideContents() {
+    console.log(this.$postTab);
+    this.$postList.hide();
+    this.$qiitaList.hide();
+    this.$pagination.hide();
+  }
+}
+
 class QiitaPostManager {
   static get qiitaUrl() {
     return 'https://qiita.com/api/v1/users/tsugita/items'
