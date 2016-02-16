@@ -1,0 +1,20 @@
+<section id="tabbar-wrapper">
+  <div id="post-tab" class="tabbar-item selected">
+    Post
+  </div>
+  <div id="qiita-tab" class="tabbar-item">
+    Qiita
+  </div>
+</section>
+
+<script>
+  $(document).on('ready page:load', function() {
+    new TabBar(
+      $('#post-tab'),
+      $('#qiita-tab'),
+      $('#post-list'),
+      $('#qiita-list'),
+      $('#post-nav')
+    );
+  })
+</script>

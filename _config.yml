@@ -5,6 +5,7 @@ aboutPage: true
 
 markdown: redcarpet
 highlighter: pygments
+babel_js_extensions: 'js, es6, babel, jsx'
 
 paginate: 20
 baseurl: /
@@ -41,5 +42,5 @@ defaults:
       layout: post
 
 gems:
-  -
-    jekyll-paginate
+  - jekyll-paginate
+  - jekyll-babel
