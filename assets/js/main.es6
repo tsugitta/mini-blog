@@ -87,6 +87,7 @@ class QiitaPost {
   constructor(post) {
     this.title = post.title;
     this.url = post.url;
+    this.tagNamesString = this.tagNamesString(post.tags);
     this.created_at = this.onlyMonthAndDayFormattedString(post.created_at);
   }
 
@@ -98,11 +99,21 @@ class QiitaPost {
     return `${monthString} ${dayString}`;
   }
 
+  tagNamesString(tags) {
+    let tagNames = [];
+
+    for (const tag of tags) {
+      tagNames.push(tag.name);
+    }
+
+    return tagNames.join(', ')
+  }
+
   render() {
     return `
       <li>
           <aside class="dates">${this.created_at}</aside>
-          <a href="${this.url}">${this.title}</a>
+          <a href="${this.url}">${this.title}<h2>${this.tagNamesString}</h2></a>
       </li>
     `;
   }

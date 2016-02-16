@@ -157,6 +157,7 @@ var QiitaPost = (function () {
 
     this.title = post.title;
     this.url = post.url;
+    this.tagNamesString = this.tagNamesString(post.tags);
     this.created_at = this.onlyMonthAndDayFormattedString(post.created_at);
   }
 
@@ -170,9 +171,41 @@ var QiitaPost = (function () {
       return monthString + ' ' + dayString;
     }
   }, {
+    key: 'tagNamesString',
+    value: function tagNamesString(tags) {
+      var tagNames = [];
+
+      var _iteratorNormalCompletion3 = true;
+      var _didIteratorError3 = false;
+      var _iteratorError3 = undefined;
+
+      try {
+        for (var _iterator3 = tags[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+          var tag = _step3.value;
+
+          tagNames.push(tag.name);
+        }
+      } catch (err) {
+        _didIteratorError3 = true;
+        _iteratorError3 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion3 && _iterator3['return']) {
+            _iterator3['return']();
+          }
+        } finally {
+          if (_didIteratorError3) {
+            throw _iteratorError3;
+          }
+        }
+      }
+
+      return tagNames.join(', ');
+    }
+  }, {
     key: 'render',
     value: function render() {
-      return '\n      <li>\n          <aside class="dates">' + this.created_at + '</aside>\n          <a href="' + this.url + '">' + this.title + '</a>\n      </li>\n    ';
+      return '\n      <li>\n          <aside class="dates">' + this.created_at + '</aside>\n          <a href="' + this.url + '">' + this.title + '<h2>' + this.tagNamesString + '</h2></a>\n      </li>\n    ';
     }
   }]);
 
