@@ -204,7 +204,7 @@ ul 	{
 	margin:0 0 20px 0; padding:0;
 	line-height: 1.7em;
 }
-li	{ list-style-type:circle; list-style-position:inside; }
+li	{ list-style-type:disc; list-style-position:inside; }
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
