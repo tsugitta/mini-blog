@@ -10,7 +10,7 @@ babel_js_extensions: 'js, es6, babel, jsx'
 paginate: 20
 baseurl: /
 domain_name: ''
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-73868937-1'
 disqus: true
 disqus_shortname: 'tsugitta-toybox'
 
