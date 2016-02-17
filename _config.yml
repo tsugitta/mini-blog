@@ -19,7 +19,7 @@ url: ''
 author: 'tsugitta'
 authorTwitter: 'sdklt'
 
-permalink: /:year/:title/
+permalink: /:year-:month-:day/
 
 defaults:
   -
