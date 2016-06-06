@@ -19,12 +19,11 @@ Often write:
 - Swift
 - Objective-C
 - Rails
-- JavaScript
-- CoffeeScript
+- JavaScript(Angular2)
 
 github: [@tsugitta](https://github.com/tsugitta)
 <br>
-twitter: [@sdklt](https://twitter.com/sdklt)
+twitter: [@tsugitta](https://twitter.com/tsugitta)
 
 
 {% include footer.html %}
