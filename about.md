@@ -16,10 +16,10 @@ An ordinary college student in Japan who're interested in programming such as Ru
 
 Often write:
 
+- JavaScript(Angular2, ReactNative)
 - Swift
+- Ruby(Ruby on Rails)
 - Objective-C
-- Rails
-- JavaScript(Angular2)
 
 github: [@tsugitta](https://github.com/tsugitta)
 <br>
